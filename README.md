@@ -48,5 +48,19 @@ Flow:
 - Pop characters to reverse
 - Compare original and reversed string
 - Display result
+
+## UC6: Queue + Stack Based Palindrome Check
+
+Objective:
+Demonstrate FIFO and LIFO behavior using Queue and Stack.
+
+Flow:
+- Enqueue characters into Queue
+- Push characters into Stack
+- Compare dequeue and pop values
+- Display palindrome result
+
+Concepts Used:
+Queue (FIFO), Stack (LIFO), Logical comparison
 # PalindroneCheckerApp
  main

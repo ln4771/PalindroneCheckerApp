@@ -36,5 +36,17 @@ Flow:
 - Compare first and last characters
 - Move pointers inward
 - Display result
+
+
+## UC5: Stack-Based Palindrome Checker
+
+Objective:
+Validate palindrome using stack data structure.
+
+Flow:
+- Push characters into stack
+- Pop characters to reverse
+- Compare original and reversed string
+- Display result
 # PalindroneCheckerApp
  main

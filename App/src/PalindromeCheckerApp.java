@@ -7,6 +7,17 @@ import java.util.ArrayDeque;
 
 public class PalindromeCheckerApp {
 
+    // ===== Node class for UC8 =====
+    static class Node {
+        char data;
+        Node next;
+
+        Node(char data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -41,10 +52,7 @@ public class PalindromeCheckerApp {
         for (int i = input.length() - 1; i >= 0; i--)
             reversed += input.charAt(i);
 
-        if (input.equals(reversed))
-            System.out.println("Palindrome");
-        else
-            System.out.println("Not a Palindrome");
+        System.out.println(input.equals(reversed) ? "Palindrome" : "Not a Palindrome");
 
 
         // ================= UC4 =================
@@ -54,9 +62,7 @@ public class PalindromeCheckerApp {
         String text = sc.nextLine();
 
         char[] chars = text.toCharArray();
-
-        int start = 0;
-        int end = chars.length - 1;
+        int start = 0, end = chars.length - 1;
         boolean isPalindrome = true;
 
         while (start < end) {
@@ -68,10 +74,7 @@ public class PalindromeCheckerApp {
             end--;
         }
 
-        if (isPalindrome)
-            System.out.println("Palindrome");
-        else
-            System.out.println("Not a Palindrome");
+        System.out.println(isPalindrome ? "Palindrome" : "Not a Palindrome");
 
 
         // ================= UC5 =================
@@ -90,10 +93,7 @@ public class PalindromeCheckerApp {
         while (!stack.isEmpty())
             reversedWord += stack.pop();
 
-        if (inputWord.equals(reversedWord))
-            System.out.println("Palindrome");
-        else
-            System.out.println("Not a Palindrome");
+        System.out.println(inputWord.equals(reversedWord) ? "Palindrome" : "Not a Palindrome");
 
 
         // ================= UC6 =================
@@ -119,10 +119,7 @@ public class PalindromeCheckerApp {
             }
         }
 
-        if (palindromeQS)
-            System.out.println("Palindrome");
-        else
-            System.out.println("Not a Palindrome");
+        System.out.println(palindromeQS ? "Palindrome" : "Not a Palindrome");
 
 
         // ================= UC7 =================
@@ -133,13 +130,11 @@ public class PalindromeCheckerApp {
 
         Deque<Character> deque = new ArrayDeque<>();
 
-        // insert characters
         for (char c : dequeInput.toCharArray())
             deque.addLast(c);
 
         boolean palindromeDeque = true;
 
-        // compare front & rear
         while (deque.size() > 1) {
             if (!deque.removeFirst().equals(deque.removeLast())) {
                 palindromeDeque = false;
@@ -147,10 +142,61 @@ public class PalindromeCheckerApp {
             }
         }
 
-        if (palindromeDeque)
-            System.out.println("Palindrome");
-        else
-            System.out.println("Not a Palindrome");
+        System.out.println(palindromeDeque ? "Palindrome" : "Not a Palindrome");
+
+
+        // ================= UC8 =================
+        System.out.println("\nUC8: Linked List Based Palindrome Checker");
+
+        System.out.print("Enter a word: ");
+        String llInput = sc.nextLine();
+
+        // Build linked list
+        Node head = null, tail = null;
+
+        for (char c : llInput.toCharArray()) {
+            Node newNode = new Node(c);
+            if (head == null) {
+                head = tail = newNode;
+            } else {
+                tail.next = newNode;
+                tail = newNode;
+            }
+        }
+
+        // Find middle using slow & fast pointers
+        Node slow = head, fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        // Reverse second half
+        Node prev = null, curr = slow;
+
+        while (curr != null) {
+            Node nextTemp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = nextTemp;
+        }
+
+        // Compare halves
+        Node firstHalf = head;
+        Node secondHalf = prev;
+        boolean palindromeLL = true;
+
+        while (secondHalf != null) {
+            if (firstHalf.data != secondHalf.data) {
+                palindromeLL = false;
+                break;
+            }
+            firstHalf = firstHalf.next;
+            secondHalf = secondHalf.next;
+        }
+
+        System.out.println(palindromeLL ? "Palindrome" : "Not a Palindrome");
 
         sc.close();
     }

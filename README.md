@@ -77,5 +77,20 @@ Flow:
 
 Concepts Used:
 Deque, Front & Rear access, Optimized comparison
+
+
+## UC8: Linked List Based Palindrome Checker
+
+Objective:
+Check palindrome using singly linked list.
+
+Flow:
+- Convert string into linked list
+- Find middle using fast and slow pointers
+- Reverse second half
+- Compare both halves
+
+Concepts Used:
+Singly Linked List, Node traversal, Fast & Slow pointers, In-place reversal
 # PalindroneCheckerApp
  main

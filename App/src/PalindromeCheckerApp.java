@@ -44,5 +44,37 @@ public class PalindromeCheckerApp {
         }
 
         sc.close();
+        // ===== UC4 =====
+        System.out.println("\nUC4: Character Array Based Palindrome Check");
+
+        Scanner sc2 = new Scanner(System.in);
+        System.out.print("Enter a word: ");
+        String text = sc2.nextLine();
+
+// convert to char array
+        char[] chars = text.toCharArray();
+
+        int start = 0;
+        int end = chars.length - 1;
+        boolean isPalindrome = true;
+
+// two-pointer comparison
+        while(start < end) {
+            if(chars[start] != chars[end]) {
+                isPalindrome = false;
+                break;
+            }
+            start++;
+            end--;
+        }
+
+// result
+        if(isPalindrome) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not a Palindrome");
+        }
+
+        sc2.close();
     }
 }

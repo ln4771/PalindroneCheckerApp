@@ -62,5 +62,20 @@ Flow:
 
 Concepts Used:
 Queue (FIFO), Stack (LIFO), Logical comparison
+
+
+## UC7: Deque-Based Optimized Palindrome Checker
+
+Objective:
+Validate palindrome using Deque by comparing front and rear elements.
+
+Flow:
+- Insert characters into deque
+- Remove first and last elements
+- Compare until deque becomes empty
+- Display result
+
+Concepts Used:
+Deque, Front & Rear access, Optimized comparison
 # PalindroneCheckerApp
  main

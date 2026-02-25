@@ -2,6 +2,8 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.util.Queue;
 import java.util.LinkedList;
+import java.util.Deque;
+import java.util.ArrayDeque;
 
 public class PalindromeCheckerApp {
 
@@ -19,9 +21,8 @@ public class PalindromeCheckerApp {
         String word = "madam";
         String reverse = "";
 
-        for (int i = word.length() - 1; i >= 0; i--) {
+        for (int i = word.length() - 1; i >= 0; i--)
             reverse += word.charAt(i);
-        }
 
         if (word.equals(reverse))
             System.out.println(word + " is a Palindrome");
@@ -37,9 +38,8 @@ public class PalindromeCheckerApp {
 
         String reversed = "";
 
-        for (int i = input.length() - 1; i >= 0; i--) {
+        for (int i = input.length() - 1; i >= 0; i--)
             reversed += input.charAt(i);
-        }
 
         if (input.equals(reversed))
             System.out.println("Palindrome");
@@ -106,8 +106,8 @@ public class PalindromeCheckerApp {
         Stack<Character> stack2 = new Stack<>();
 
         for (char c : qsInput.toCharArray()) {
-            queue.add(c);     // FIFO
-            stack2.push(c);   // LIFO
+            queue.add(c);
+            stack2.push(c);
         }
 
         boolean palindromeQS = true;
@@ -120,6 +120,34 @@ public class PalindromeCheckerApp {
         }
 
         if (palindromeQS)
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not a Palindrome");
+
+
+        // ================= UC7 =================
+        System.out.println("\nUC7: Deque-Based Optimized Palindrome Checker");
+
+        System.out.print("Enter a word: ");
+        String dequeInput = sc.nextLine();
+
+        Deque<Character> deque = new ArrayDeque<>();
+
+        // insert characters
+        for (char c : dequeInput.toCharArray())
+            deque.addLast(c);
+
+        boolean palindromeDeque = true;
+
+        // compare front & rear
+        while (deque.size() > 1) {
+            if (!deque.removeFirst().equals(deque.removeLast())) {
+                palindromeDeque = false;
+                break;
+            }
+        }
+
+        if (palindromeDeque)
             System.out.println("Palindrome");
         else
             System.out.println("Not a Palindrome");

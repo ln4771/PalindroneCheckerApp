@@ -140,8 +140,23 @@ Concepts Used:
 Singly Linked List, Node Traversal, Fast and Slow Pointer Technique
 
 Data Structure Used:
-Linked List- Compare first and last characters
-- Move pointers inward
-- Display result
+Linked List
 
 ---
+
+## UC9 : Recursive Palindrome Checker
+
+Objective:
+Check whether a given string is a palindrome using recursion.
+
+Flow:
+- Compare the first and last characters
+- Recursively check the remaining substring
+- Stop recursion when base condition is met
+- Display whether the string is a palindrome or not
+
+Concepts Used:
+Recursion, Base Condition, Call Stack
+
+Data Structure Used:
+Call Stack

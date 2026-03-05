@@ -2,8 +2,21 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.util.Queue;
 import java.util.LinkedList;
+import java.util.Deque;
+import java.util.ArrayDeque;
 
 public class PalindromeCheckerApp {
+
+    public static boolean recursiveCheck(String s, int start, int end) {
+
+        if (start >= end)
+            return true;
+
+        if (s.charAt(start) != s.charAt(end))
+            return false;
+
+        return recursiveCheck(s, start + 1, end - 1);
+    }
 
     public static void main(String[] args) {
 
@@ -28,7 +41,6 @@ public class PalindromeCheckerApp {
         else
             System.out.println(word + " is not a Palindrome");
 
-
         // ================= UC3 =================
         System.out.println("\nUC3: Palindrome Check Using String Reverse");
 
@@ -43,12 +55,11 @@ public class PalindromeCheckerApp {
 
         System.out.println(input.equals(reversed) ? "Palindrome" : "Not a Palindrome");
 
-
         // ================= UC4 =================
         System.out.println("\nUC4: Character Array Based Palindrome Check");
 
         System.out.print("Enter a word: ");
-        String text = sc.nextLine()
+        String text = sc.nextLine();
 
         char[] chars = text.toCharArray();
         int start = 0, end = chars.length - 1;
@@ -57,14 +68,13 @@ public class PalindromeCheckerApp {
         while (start < end) {
             if (chars[start] != chars[end]) {
                 isPalindrome = false;
-                break
+                break;
             }
             start++;
             end--;
         }
 
         System.out.println(isPalindrome ? "Palindrome" : "Not a Palindrome");
-
 
         // ================= UC5 =================
         System.out.println("\nUC5: Stack-Based Palindrome Checker");
@@ -86,7 +96,6 @@ public class PalindromeCheckerApp {
 
         System.out.println(stackInput.equals(reversedStack) ? "Palindrome" : "Not a Palindrome");
 
-
         // ================= UC6 =================
         System.out.println("\nUC6: Queue + Stack Based Palindrome Check");
 
@@ -103,15 +112,14 @@ public class PalindromeCheckerApp {
         boolean isPal = true;
 
         while (!queue.isEmpty()) {
-
             if (queue.remove() != stack2.pop()) {
                 isPal = false;
                 break;
             }
+        }
 
         System.out.println("Input : " + queueStackInput);
         System.out.println("Is Palindrome? : " + isPal);
-
 
         // ================= UC7 =================
         System.out.println("\nUC7: Deque-Based Optimized Palindrome Checker");
@@ -135,7 +143,6 @@ public class PalindromeCheckerApp {
 
         System.out.println("Input : " + dequeInput);
         System.out.println("Is Palindrome? : " + isDequePalindrome);
-
 
         // ================= UC8 =================
         System.out.println("\nUC8: Linked List Based Palindrome Checker");
@@ -163,6 +170,16 @@ public class PalindromeCheckerApp {
 
         System.out.println("Input : " + linkedInput);
         System.out.println("Is Palindrome? : " + isLinkedPalindrome);
+
+        // ================= UC9 =================
+        System.out.println("\nUC9: Recursive Palindrome Checker");
+
+        String recursiveInput = "madam";
+
+        boolean recursiveResult = recursiveCheck(recursiveInput, 0, recursiveInput.length() - 1);
+
+        System.out.println("Input : " + recursiveInput);
+        System.out.println("Is Palindrome? : " + recursiveResult);
 
         sc.close();
     }

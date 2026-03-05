@@ -2,7 +2,6 @@ import java.util.*;
 
 public class PalindromeCheckerApp {
 
-    // UC9 recursive method
     public static boolean recursiveCheck(String s, int start, int end) {
         if (start >= end)
             return true;
@@ -43,6 +42,7 @@ public class PalindromeCheckerApp {
         char[] chars = input.toCharArray();
         int start = 0;
         int end = chars.length - 1;
+
         boolean isPalindrome = true;
 
         while (start < end) {
@@ -131,7 +131,6 @@ public class PalindromeCheckerApp {
 
         // UC9
         String rec = "madam";
-
         System.out.println(recursiveCheck(rec, 0, rec.length() - 1));
 
         // UC10
@@ -152,10 +151,11 @@ public class PalindromeCheckerApp {
 
         // UC11
         PalindromeService service = new PalindromeService();
+        System.out.println(service.checkPalindrome("racecar"));
 
-        String oopInput = "racecar";
-
-        System.out.println(service.checkPalindrome(oopInput));
+        // UC12 Strategy Pattern
+        PalindromeStrategy strategy = new StackStrategy();
+        System.out.println(strategy.check("level"));
 
         sc.close();
     }
@@ -179,4 +179,26 @@ class PalindromeService {
 
         return true;
     }
-                    }
+}
+
+interface PalindromeStrategy {
+    boolean check(String input);
+}
+
+class StackStrategy implements PalindromeStrategy {
+
+    public boolean check(String input) {
+
+        Stack<Character> stack = new Stack<>();
+
+        for (char c : input.toCharArray())
+            stack.push(c);
+
+        for (char c : input.toCharArray()) {
+            if (c != stack.pop())
+                return false;
+        }
+
+        return true;
+    }
+}

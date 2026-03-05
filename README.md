@@ -121,3 +121,27 @@ Deque (Double Ended Queue), Front and Rear Access, Logical Comparison
 
 Data Structure Used:
 Deque
+
+---
+
+## UC8 : Linked List Based Palindrome Checker
+
+Objective:
+Check whether a given string is a palindrome using a singly linked list.
+
+Flow:
+- Convert the string into a linked list
+- Traverse the linked list
+- Compare characters from both ends
+- Continue comparison until the list becomes empty
+- Display the palindrome result
+
+Concepts Used:
+Singly Linked List, Node Traversal, Fast and Slow Pointer Technique
+
+Data Structure Used:
+Linked List- Compare first and last characters
+- Move pointers inward
+- Display result
+
+---

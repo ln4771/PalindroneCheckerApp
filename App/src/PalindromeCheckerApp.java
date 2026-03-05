@@ -136,6 +136,34 @@ public class PalindromeCheckerApp {
         System.out.println("Input : " + dequeInput);
         System.out.println("Is Palindrome? : " + isDequePalindrome);
 
+
+        // ================= UC8 =================
+        System.out.println("\nUC8: Linked List Based Palindrome Checker");
+
+        String linkedInput = "level";
+
+        LinkedList<Character> list = new LinkedList<>();
+
+        for (char c : linkedInput.toCharArray()) {
+            list.add(c);
+        }
+
+        boolean isLinkedPalindrome = true;
+
+        while (list.size() > 1) {
+
+            char first = list.removeFirst();
+            char last = list.removeLast();
+
+            if (first != last) {
+                isLinkedPalindrome = false;
+                break;
+            }
+        }
+
+        System.out.println("Input : " + linkedInput);
+        System.out.println("Is Palindrome? : " + isLinkedPalindrome);
+
         sc.close();
     }
 }

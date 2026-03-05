@@ -20,11 +20,11 @@ public class PalindromeCheckerApp {
             reverse += word.charAt(i);
         }
 
-        if (word.equals(reverse)) {
+        if (word.equals(reverse))
             System.out.println(word + " is a Palindrome");
-        } else {
+        else
             System.out.println(word + " is not a Palindrome");
-        }
+
 
         // ================= UC3 =================
         System.out.println("\nUC3: Palindrome Check Using String Reverse");
@@ -36,6 +36,58 @@ public class PalindromeCheckerApp {
 
         for (int i = input.length() - 1; i >= 0; i--) {
             reversed += input.charAt(i);
+        }
+
+        System.out.println(input.equals(reversed) ? "Palindrome" : "Not a Palindrome");
+
+
+        // ================= UC4 =================
+        System.out.println("\nUC4: Character Array Based Palindrome Check");
+
+        System.out.print("Enter a word: ");
+        String text = sc.nextLine();
+
+        char[] chars = text.toCharArray();
+        int start = 0, end = chars.length - 1;
+        boolean isPalindrome = true;
+
+        while (start < end) {
+            if (chars[start] != chars[end]) {
+                isPalindrome = false;
+                break;
+            }
+            start++;
+            end--;
+        }
+
+        System.out.println(isPalindrome ? "Palindrome" : "Not a Palindrome");
+
+
+        // ================= UC5 =================
+        System.out.println("\nUC5: Stack-Based Palindrome Checker");
+
+        System.out.print("Enter a word: ");
+        String stackInput = sc.nextLine();
+
+        Stack<Character> stack = new Stack<>();
+
+        for (char c : stackInput.toCharArray()) {
+            stack.push(c);
+        }
+
+        String reversedStack = "";
+
+        while (!stack.isEmpty()) {
+            reversedStack += stack.pop();
+        }
+
+        System.out.println(stackInput.equals(reversedStack) ? "Palindrome" : "Not a Palindrome");
+
+        sc.close();
+    }
+}
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reversed = reversed + input.charAt(i);
         }
 
         if (input.equals(reversed)) {

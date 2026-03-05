@@ -97,10 +97,7 @@ Flow:
 - If all characters match, the string is a palindrome
 
 Concepts Used:
-Queue (FIFO), Stack (LIFO), Enqueue Operation, Dequeue Operation
-
-Data Structures Used:
-Queue, Stack
+Queue (FIFO), Stack (LIFO)
 
 ---
 
@@ -114,32 +111,22 @@ Flow:
 - Remove first and last characters
 - Compare them
 - Continue until deque becomes empty or mismatch occurs
-- Display the palindrome result
 
 Concepts Used:
-Deque (Double Ended Queue), Front and Rear Access, Logical Comparison
-
-Data Structure Used:
-Deque
+Deque (Double Ended Queue)
 
 ---
 
 ## UC8 : Linked List Based Palindrome Checker
 
 Objective:
-Check whether a given string is a palindrome using a singly linked list.
+Check whether a given string is a palindrome using a linked list.
 
 Flow:
-- Convert the string into a linked list
-- Traverse the linked list
+- Convert string to linked list
 - Compare characters from both ends
-- Continue comparison until the list becomes empty
-- Display the palindrome result
 
 Concepts Used:
-Singly Linked List, Node Traversal, Fast and Slow Pointer Technique
-
-Data Structure Used:
 Linked List
 
 ---
@@ -147,16 +134,27 @@ Linked List
 ## UC9 : Recursive Palindrome Checker
 
 Objective:
-Check whether a given string is a palindrome using recursion.
+Check whether a string is a palindrome using recursion.
 
 Flow:
-- Compare the first and last characters
-- Recursively check the remaining substring
-- Stop recursion when base condition is met
-- Display whether the string is a palindrome or not
+- Compare first and last characters
+- Recursively check the substring
 
 Concepts Used:
-Recursion, Base Condition, Call Stack
+Recursion, Call Stack
 
-Data Structure Used:
-Call Stack
+---
+
+## UC10 : Case-Insensitive & Space-Ignored Palindrome
+
+Objective:
+Check palindrome while ignoring spaces and case differences.
+
+Flow:
+- Normalize string
+- Remove spaces
+- Convert to lowercase
+- Apply palindrome check
+
+Concepts Used:
+String preprocessing, Regular expressions

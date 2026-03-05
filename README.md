@@ -10,12 +10,10 @@ Flow:
 - Implement the main() method
 - Display welcome message to the user
 
-Concepts used:
+Concepts Used:
 Java Class, Main Method, System.out.println()
 
-=======
-## UC2: Hardcoded Palindrom
-
+## UC2: Hardcoded Palindrome
 
 Objective:
 Check whether a hardcoded string is a palindrome.
@@ -36,6 +34,7 @@ Flow:
 - Compared using equals()
 - Result displayed
 
+  
 ## UC4: Character Array Palindrome
 
 Objective:
@@ -45,60 +44,4 @@ Flow:
 - Convert string to char[]
 - Compare first and last characters
 - Move pointers inward
-- Display result
-
-
-## UC5: Stack-Based Palindrome Checker
-
-Objective:
-Validate palindrome using stack data structure.
-
-Flow:
-- Push characters into stack
-- Pop characters to reverse
-- Compare original and reversed string
-- Display result
-
-## UC6: Queue + Stack Based Palindrome Check
-
-Objective:
-Demonstrate FIFO and LIFO behavior using Queue and Stack.
-
-Flow:
-- Enqueue characters into Queue
-- Push characters into Stack
-- Compare dequeue and pop values
-- Display palindrome result
-
-Concepts Used:
-Queue (FIFO), Stack (LIFO), Logical comparison
-
-
-## UC7: Deque-Based Optimized Palindrome Checker
-
-Objective:
-Validate palindrome using Deque by comparing front and rear elements.
-
-Flow:
-- Insert characters into deque
-- Remove first and last elements
-- Compare until deque becomes empty
-- Display result
-
-Concepts Used:
-Deque, Front & Rear access, Optimized comparison
-
-
-## UC8: Linked List Based Palindrome Checker
-
-Objective:
-Check palindrome using singly linked list.
-
-Flow:
-- Convert string into linked list
-- Find middle using fast and slow pointers
-- Reverse second half
-- Compare both halves
-
-Concepts Used:
-Singly Linked List, Node traversal, Fast & Slow pointers, In-place reversal
+- Display results 

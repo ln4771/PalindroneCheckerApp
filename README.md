@@ -107,28 +107,4 @@ Queue, Stack- Convert string to char[]
 - Move pointers inward
 - Display result
 
-
-## UC5: Stack-Based Palindrome Checker
-
-Objective:
-Validate palindrome using stack data structure.
-
-Flow:
-- Push characters into stack
-- Pop characters to reverse
-- Compare original and reversed string
-- Display result
-
-## UC6: Queue + Stack Based Palindrome Check
-
-Objective:
-Demonstrate FIFO and LIFO behavior using Queue and Stack.
-
-Flow:
-- Enqueue characters into Queue
-- Push characters into Stack
-- Compare dequeue and pop values
-- Display palindrome result
-
-Concepts Used:
-Queue (FIFO), Stack (LIFO), Logical comparison
+---

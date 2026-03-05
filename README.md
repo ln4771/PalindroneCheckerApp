@@ -1,81 +1,123 @@
-Welcome
-# PalindroneChekcerApp
-//running procedure
-//flow of project
-//objective
-//usercase1
-=======
-## UC2: Hardcoded Palindrome
+# Palindrome Checker App
+
+The objective of the Palindrome Checker App is to design and implement a console-based Java application that validates whether a given string is a palindrome under different conditions, while strengthening core programming fundamentals and data structure concepts.
+
+---
+
+## UC1 : Application Entry & Welcome Message
 
 Objective:
-Check whether a hardcoded string is a palindrome.
+Create the entry point of the Palindrome Checker application and display a welcome message.
 
 Flow:
-- Program starts
-- Hardcoded string is checked
-- Result displayed\
-
-## UC3: Palindrome Using String Reverse
-
-Objective:
-Check palindrome by reversing the string using a loop.
-
-Flow:
-- User enters string
-- String reversed using loop
-- Compared using equals()
-- Result displayed
-
-## UC4: Character Array Palindrome
-
-Objective:
-Check palindrome using character array and two-pointer technique.
-
-Flow:
-- Convert string to char[]
-- Compare first and last characters
-- Move pointers inward
-- Display result
-
-
-## UC5: Stack-Based Palindrome Checker
-
-Objective:
-Validate palindrome using stack data structure.
-
-Flow:
-- Push characters into stack
-- Pop characters to reverse
-- Compare original and reversed string
-- Display result
-
-## UC6: Queue + Stack Based Palindrome Check
-
-Objective:
-Demonstrate FIFO and LIFO behavior using Queue and Stack.
-
-Flow:
-- Enqueue characters into Queue
-- Push characters into Stack
-- Compare dequeue and pop values
-- Display palindrome result
+- Start the application
+- Display welcome message for the user
+- Introduce the Palindrome Checker program
 
 Concepts Used:
-Queue (FIFO), Stack (LIFO), Logical comparison
+Main Method, Console Output, Basic Java Program Structure
 
+---
 
-## UC7: Deque-Based Optimized Palindrome Checker
+## UC2 : Hardcoded Palindrome Result
 
 Objective:
-Validate palindrome using Deque by comparing front and rear elements.
+Check whether a predefined string is a palindrome.
+
+Flow:
+- Define a string variable
+- Reverse the string using a loop
+- Compare the original string with the reversed string
+- Display whether it is a palindrome or not
+
+Concepts Used:
+String Handling, For Loop, Conditional Statements
+
+---
+
+## UC3 : Palindrome Check Using String Reverse
+
+Objective:
+Allow the user to enter a word and check if it is a palindrome by reversing the string.
+
+Flow:
+- Accept input from the user
+- Reverse the string using a loop
+- Compare the original string with the reversed string
+- Display whether it is a palindrome or not
+
+Concepts Used:
+Scanner Class, String Manipulation, For Loop, Conditional Statements
+
+---
+
+## UC4 : Character Array Based Palindrome Check
+
+Objective:
+Check whether a given string is a palindrome using a character array.
+
+Flow:
+- Accept input from the user
+- Convert the string into a character array
+- Compare characters from the start and end
+- Continue comparison until the middle of the array
+- Display whether it is a palindrome or not
+
+Concepts Used:
+Character Array, Two Pointer Technique, Loop, Conditional Statements
+
+---
+
+## UC5 : Stack-Based Palindrome Checker
+
+Objective:
+Check whether a given string is a palindrome using a Stack data structure.
+
+Flow:
+- Accept input from the user
+- Push each character of the string into the stack
+- Pop characters from the stack to form the reversed string
+- Compare the original string with the reversed string
+- Display whether it is a palindrome or not
+
+Concepts Used:
+Stack (LIFO), Push Operation, Pop Operation, Loop, Conditional Statements
+
+---
+
+## UC6 : Queue + Stack Based Palindrome Check
+
+Objective:
+Demonstrate FIFO vs LIFO behavior using Queue and Stack.
+
+Flow:
+- Enqueue characters
+- Push characters to stack
+- Compare dequeue vs pop
+- If all characters match, the string is a palindrome
+
+Concepts Used:
+Queue (FIFO), Stack (LIFO), Enqueue Operation, Dequeue Operation
+
+Data Structures Used:
+Queue, Stack
+
+---
+
+## UC7 : Deque-Based Optimized Palindrome Checker
+
+Objective:
+Check whether a given string is a palindrome using a Deque data structure.
 
 Flow:
 - Insert characters into deque
-- Remove first and last elements
-- Compare until deque becomes empty
-- Display result
+- Remove first and last characters
+- Compare them
+- Continue until deque becomes empty or mismatch occurs
+- Display the palindrome result
 
 Concepts Used:
-Deque, Front & Rear access, Optimized comparison
-# PalindroneCheckerApp
- main
+Deque (Double Ended Queue), Front and Rear Access, Logical Comparison
+
+Data Structure Used:
+Deque

@@ -82,3 +82,29 @@ Flow:
 
 Concepts Used:
 Stack (LIFO), Push Operation, Pop Operation, Loop, Conditional Statements
+
+---
+
+## UC6 : Queue + Stack Based Palindrome Check
+
+Objective:
+Demonstrate FIFO vs LIFO behavior using Queue and Stack to validate palindrome logic.
+
+Flow:
+- Define an input string
+- Insert each character into both a queue and a stack
+- Remove characters from the queue using dequeue
+- Remove characters from the stack using pop
+- Compare both characters
+- If all characters match, the string is a palindrome
+
+Concepts Used:
+Queue (FIFO), Stack (LIFO), Enqueue Operation, Dequeue Operation, Logical Comparison
+
+Data Structures Used:
+Queue, Stack- Convert string to char[]
+- Compare first and last characters
+- Move pointers inward
+- Display result
+
+---

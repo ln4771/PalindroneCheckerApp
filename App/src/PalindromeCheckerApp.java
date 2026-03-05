@@ -46,7 +46,7 @@ public class PalindromeCheckerApp {
         System.out.println("\nUC4: Character Array Based Palindrome Check");
 
         System.out.print("Enter a word: ");
-        String text = sc.nextLine();
+        String text = sc.nextLine()
 
         char[] chars = text.toCharArray();
         int start = 0, end = chars.length - 1;
@@ -55,13 +55,14 @@ public class PalindromeCheckerApp {
         while (start < end) {
             if (chars[start] != chars[end]) {
                 isPalindrome = false;
-                break;
+                break
             }
             start++;
             end--;
         }
 
         System.out.println(isPalindrome ? "Palindrome" : "Not a Palindrome");
+      
 
 
         // ================= UC5 =================
@@ -83,7 +84,9 @@ public class PalindromeCheckerApp {
         }
 
         System.out.println(stackInput.equals(reversedStack) ? "Palindrome" : "Not a Palindrome");
-
         sc.close();
-    }
-}
+      }
+  }
+
+
+

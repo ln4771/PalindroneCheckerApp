@@ -1,5 +1,5 @@
 
-# PalindroneChekcerApp
+# PalindroneCheckerApp
 ## UC1: Application Entry & Welcome Message
 
 Objective:

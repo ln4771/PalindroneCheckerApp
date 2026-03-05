@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Stack;
 
 public class PalindromeCheckerApp {
 
@@ -107,13 +106,16 @@ public class PalindromeCheckerApp {
 
         int start = 0;
         int end = chars.length - 1;
+
         boolean isPalindrome = true;
 
         while (start < end) {
+
             if (chars[start] != chars[end]) {
                 isPalindrome = false;
                 break;
             }
+
             start++;
             end--;
         }
@@ -124,27 +126,39 @@ public class PalindromeCheckerApp {
             System.out.println("Not a Palindrome");
         }
 
-        // ================= UC5 =================
-        System.out.println("\nUC5: Stack-Based Palindrome Checker");
+        sc.close();
+    }
+}        System.out.println("\nUC2: Hardcoded Palindrome Result");
+
+        String word = "madam";
+        String reverse = "";
+
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reverse += word.charAt(i);
+        }
+
+        if (word.equals(reverse)) {
+            System.out.println(word + " is a Palindrome");
+        } else {
+            System.out.println(word + " is not a Palindrome");
+        }
+
+
+        // ===== UC3 =====
+        System.out.println("\nUC3: Palindrome Check Using String Reverse");
+
+        Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter a word: ");
-        String inputWord = sc.nextLine();
+        String input = sc.nextLine();
 
-        Stack<Character> stack = new Stack<>();
+        String reversed = "";
 
-        // push characters
-        for (char c : inputWord.toCharArray()) {
-            stack.push(c);
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reversed += input.charAt(i);
         }
 
-        // pop characters
-        String reversedWord = "";
-        while (!stack.isEmpty()) {
-            reversedWord = reversedWord + stack.pop();
-        }
-
-        // compare
-        if (inputWord.equals(reversedWord)) {
+        if (input.equals(reversed)) {
             System.out.println("Palindrome");
         } else {
             System.out.println("Not a Palindrome");

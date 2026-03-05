@@ -26,3 +26,17 @@ Flow:
 
 Concepts Used:
 String Handling, For Loop, Conditional Statements
+
+## UC3: Palindrome Check Using String Reverse
+
+Objective:
+Allow the user to enter a word and check if it is a palindrome by reversing the string.
+
+Flow:
+- Accept input from the user
+- Reverse the string using a loop
+- Compare the original string with the reversed string
+- Display whether it is a palindrome or not
+
+Concepts Used:
+Scanner Class, String Manipulation, For Loop, Conditional Statements

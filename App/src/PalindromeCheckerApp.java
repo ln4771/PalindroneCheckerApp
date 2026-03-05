@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
@@ -27,5 +29,27 @@ public class PalindromeCheckerApp {
             System.out.println(word + " is not a Palindrome");
         }
 
+
+        // ===== UC3 =====
+        System.out.println("\nUC3: Palindrome Check Using String Reverse");
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a word: ");
+        String input = sc.nextLine();
+
+        String reversed = "";
+
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reversed += input.charAt(i);
+        }
+
+        if (input.equals(reversed)) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not a Palindrome");
+        }
+
+        sc.close();
     }
 }

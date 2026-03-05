@@ -88,23 +88,36 @@ Stack (LIFO), Push Operation, Pop Operation, Loop, Conditional Statements
 ## UC6 : Queue + Stack Based Palindrome Check
 
 Objective:
-Demonstrate FIFO vs LIFO behavior using Queue and Stack to validate palindrome logic.
+Demonstrate FIFO vs LIFO behavior using Queue and Stack.
 
 Flow:
-- Define an input string
-- Insert each character into both a queue and a stack
-- Remove characters from the queue using dequeue
-- Remove characters from the stack using pop
-- Compare both characters
+- Enqueue characters
+- Push characters to stack
+- Compare dequeue vs pop
 - If all characters match, the string is a palindrome
 
 Concepts Used:
-Queue (FIFO), Stack (LIFO), Enqueue Operation, Dequeue Operation, Logical Comparison
+Queue (FIFO), Stack (LIFO), Enqueue Operation, Dequeue Operation
 
 Data Structures Used:
-Queue, Stack- Convert string to char[]
-- Compare first and last characters
-- Move pointers inward
-- Display result
+Queue, Stack
 
 ---
+
+## UC7 : Deque-Based Optimized Palindrome Checker
+
+Objective:
+Check whether a given string is a palindrome using a Deque data structure.
+
+Flow:
+- Insert characters into deque
+- Remove first and last characters
+- Compare them
+- Continue until deque becomes empty or mismatch occurs
+- Display the palindrome result
+
+Concepts Used:
+Deque (Double Ended Queue), Front and Rear Access, Logical Comparison
+
+Data Structure Used:
+Deque

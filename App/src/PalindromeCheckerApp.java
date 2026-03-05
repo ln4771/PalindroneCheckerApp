@@ -64,7 +64,6 @@ public class PalindromeCheckerApp {
         }
 
         System.out.println(isPalindrome ? "Palindrome" : "Not a Palindrome");
-      
 
 
         // ================= UC5 =================
@@ -97,8 +96,8 @@ public class PalindromeCheckerApp {
         Stack<Character> stack2 = new Stack<>();
 
         for (char c : queueStackInput.toCharArray()) {
-            queue.add(c);     // enqueue
-            stack2.push(c);   // push
+            queue.add(c);
+            stack2.push(c);
         }
 
         boolean isPal = true;
@@ -110,10 +109,32 @@ public class PalindromeCheckerApp {
                 break;
             }
 
-        }
-
         System.out.println("Input : " + queueStackInput);
         System.out.println("Is Palindrome? : " + isPal);
+
+
+        // ================= UC7 =================
+        System.out.println("\nUC7: Deque-Based Optimized Palindrome Checker");
+
+        String dequeInput = "refer";
+
+        Deque<Character> deque = new ArrayDeque<>();
+
+        for (char c : dequeInput.toCharArray()) {
+            deque.add(c);
+        }
+
+        boolean isDequePalindrome = true;
+
+        while (deque.size() > 1) {
+            if (deque.removeFirst() != deque.removeLast()) {
+                isDequePalindrome = false;
+                break;
+            }
+        }
+
+        System.out.println("Input : " + dequeInput);
+        System.out.println("Is Palindrome? : " + isDequePalindrome);
 
         sc.close();
     }

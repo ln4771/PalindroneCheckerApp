@@ -23,9 +23,16 @@ public class PalindromeCheckerApp {
         Scanner sc = new Scanner(System.in);
 
         // ================= UC1 =================
-        System.out.println("Palindrome Checker App");
-        System.out.println("UC1: Application Entry & Welcome Message");
+        
+        System.out.println("=================================");
+        System.out.println("       Palindrome Checker        ");
+        System.out.println("=================================");
 
+        System.out.println("Welcome to the Palindrome Checker Application!");
+
+        System.out.println("This program will check whether a word is a palindrome or not.");
+
+    }
         // ================= UC2 =================
         System.out.println("\nUC2: Hardcoded Palindrome Result");
 

@@ -1,14 +1,8 @@
-import java.util.Scanner;
-import java.util.Stack;
-import java.util.Queue;
-import java.util.LinkedList;
-import java.util.Deque;
-import java.util.ArrayDeque;
+import java.util.*;
 
 public class PalindromeCheckerApp {
 
     public static boolean recursiveCheck(String s, int start, int end) {
-
         if (start >= end)
             return true;
 
@@ -22,13 +16,9 @@ public class PalindromeCheckerApp {
 
         Scanner sc = new Scanner(System.in);
 
-        // ================= UC1 =================
         System.out.println("Palindrome Checker App");
-        System.out.println("UC1: Application Entry & Welcome Message");
 
-        // ================= UC2 =================
-        System.out.println("\nUC2: Hardcoded Palindrome Result");
-
+        // UC2
         String word = "madam";
         String reverse = "";
 
@@ -36,33 +26,26 @@ public class PalindromeCheckerApp {
             reverse += word.charAt(i);
         }
 
-        if (word.equals(reverse))
-            System.out.println(word + " is a Palindrome");
-        else
-            System.out.println(word + " is not a Palindrome");
+        System.out.println(word.equals(reverse) ? "Palindrome" : "Not Palindrome");
 
-        // ================= UC3 =================
-        System.out.println("\nUC3: Palindrome Check Using String Reverse");
-
-        System.out.print("Enter a word: ");
+        // UC3
+        System.out.print("Enter word: ");
         String input = sc.nextLine();
 
-        String reversed = "";
+        String rev = "";
 
         for (int i = input.length() - 1; i >= 0; i--) {
-            reversed += input.charAt(i);
+            rev += input.charAt(i);
         }
 
-        System.out.println(input.equals(reversed) ? "Palindrome" : "Not a Palindrome");
+        System.out.println(input.equals(rev) ? "Palindrome" : "Not Palindrome");
 
-        // ================= UC4 =================
-        System.out.println("\nUC4: Character Array Based Palindrome Check");
+        // UC4
+        char[] chars = input.toCharArray();
 
-        System.out.print("Enter a word: ");
-        String text = sc.nextLine();
+        int start = 0;
+        int end = chars.length - 1;
 
-        char[] chars = text.toCharArray();
-        int start = 0, end = chars.length - 1;
         boolean isPalindrome = true;
 
         while (start < end) {
@@ -74,112 +57,101 @@ public class PalindromeCheckerApp {
             end--;
         }
 
-        System.out.println(isPalindrome ? "Palindrome" : "Not a Palindrome");
+        System.out.println(isPalindrome ? "Palindrome" : "Not Palindrome");
 
-        // ================= UC5 =================
-        System.out.println("\nUC5: Stack-Based Palindrome Checker");
-
-        System.out.print("Enter a word: ");
-        String stackInput = sc.nextLine();
-
+        // UC5
         Stack<Character> stack = new Stack<>();
 
-        for (char c : stackInput.toCharArray()) {
+        for (char c : input.toCharArray())
             stack.push(c);
+
+        String stackRev = "";
+
+        while (!stack.isEmpty())
+            stackRev += stack.pop();
+
+        System.out.println(input.equals(stackRev) ? "Palindrome" : "Not Palindrome");
+
+        // UC6
+        String qInput = "civic";
+
+        Queue<Character> q = new LinkedList<>();
+        Stack<Character> s = new Stack<>();
+
+        for (char c : qInput.toCharArray()) {
+            q.add(c);
+            s.push(c);
         }
 
-        String reversedStack = "";
+        boolean qPal = true;
 
-        while (!stack.isEmpty()) {
-            reversedStack += stack.pop();
-        }
-
-        System.out.println(stackInput.equals(reversedStack) ? "Palindrome" : "Not a Palindrome");
-
-        // ================= UC6 =================
-        System.out.println("\nUC6: Queue + Stack Based Palindrome Check");
-
-        String queueStackInput = "civic";
-
-        Queue<Character> queue = new LinkedList<>();
-        Stack<Character> stack2 = new Stack<>();
-
-        for (char c : queueStackInput.toCharArray()) {
-            queue.add(c);
-            stack2.push(c);
-        }
-
-        boolean isPal = true;
-
-        while (!queue.isEmpty()) {
-            if (queue.remove() != stack2.pop()) {
-                isPal = false;
+        while (!q.isEmpty()) {
+            if (q.remove() != s.pop()) {
+                qPal = false;
                 break;
             }
         }
 
-        System.out.println("Input : " + queueStackInput);
-        System.out.println("Is Palindrome? : " + isPal);
+        System.out.println(qPal);
 
-        // ================= UC7 =================
-        System.out.println("\nUC7: Deque-Based Optimized Palindrome Checker");
+        // UC7
+        Deque<Character> d = new ArrayDeque<>();
 
-        String dequeInput = "refer";
+        String dq = "refer";
 
-        Deque<Character> deque = new ArrayDeque<>();
+        for (char c : dq.toCharArray())
+            d.add(c);
 
-        for (char c : dequeInput.toCharArray()) {
-            deque.add(c);
-        }
+        boolean dPal = true;
 
-        boolean isDequePalindrome = true;
-
-        while (deque.size() > 1) {
-            if (deque.removeFirst() != deque.removeLast()) {
-                isDequePalindrome = false;
+        while (d.size() > 1) {
+            if (d.removeFirst() != d.removeLast()) {
+                dPal = false;
                 break;
             }
         }
 
-        System.out.println("Input : " + dequeInput);
-        System.out.println("Is Palindrome? : " + isDequePalindrome);
+        System.out.println(dPal);
 
-        // ================= UC8 =================
-        System.out.println("\nUC8: Linked List Based Palindrome Checker");
-
-        String linkedInput = "level";
-
+        // UC8
         LinkedList<Character> list = new LinkedList<>();
 
-        for (char c : linkedInput.toCharArray()) {
-            list.add(c);
-        }
+        String l = "level";
 
-        boolean isLinkedPalindrome = true;
+        for (char c : l.toCharArray())
+            list.add(c);
+
+        boolean lPal = true;
 
         while (list.size() > 1) {
-
-            char first = list.removeFirst();
-            char last = list.removeLast();
-
-            if (first != last) {
-                isLinkedPalindrome = false;
+            if (list.removeFirst() != list.removeLast()) {
+                lPal = false;
                 break;
             }
         }
 
-        System.out.println("Input : " + linkedInput);
-        System.out.println("Is Palindrome? : " + isLinkedPalindrome);
+        System.out.println(lPal);
 
-        // ================= UC9 =================
-        System.out.println("\nUC9: Recursive Palindrome Checker");
+        // UC9
+        String rec = "madam";
 
-        String recursiveInput = "madam";
+        System.out.println(recursiveCheck(rec, 0, rec.length() - 1));
 
-        boolean recursiveResult = recursiveCheck(recursiveInput, 0, recursiveInput.length() - 1);
+        // UC10
+        String phrase = "A man a plan a canal Panama";
 
-        System.out.println("Input : " + recursiveInput);
-        System.out.println("Is Palindrome? : " + recursiveResult);
+        String normalized = phrase.replaceAll("[^a-zA-Z]", "").toLowerCase();
+
+        boolean normPal = true;
+
+        for (int i = 0; i < normalized.length() / 2; i++) {
+            if (normalized.charAt(i) != normalized.charAt(normalized.length() - 1 - i)) {
+                normPal = false;
+                break;
+            }
+        }
+
+        System.out.println(normPal);
 
         sc.close();
     }

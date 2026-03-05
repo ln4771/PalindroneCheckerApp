@@ -10,10 +10,12 @@ Flow:
 - Implement the main() method
 - Display welcome message to the user
 
-Concepts Used:
+Concepts used:
 Java Class, Main Method, System.out.println()
+
 =======
-## UC2: Hardcoded Palindrome
+## UC2: Hardcoded Palindrom
+
 
 Objective:
 Check whether a hardcoded string is a palindrome.

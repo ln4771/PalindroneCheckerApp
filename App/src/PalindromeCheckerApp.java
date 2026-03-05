@@ -2,6 +2,7 @@ import java.util.*;
 
 public class PalindromeCheckerApp {
 
+    // UC9 recursive method
     public static boolean recursiveCheck(String s, int start, int end) {
         if (start >= end)
             return true;
@@ -22,11 +23,10 @@ public class PalindromeCheckerApp {
         String word = "madam";
         String reverse = "";
 
-        for (int i = word.length() - 1; i >= 0; i--) {
+        for (int i = word.length() - 1; i >= 0; i--)
             reverse += word.charAt(i);
-        }
 
-        System.out.println(word.equals(reverse) ? "Palindrome" : "Not Palindrome");
+        System.out.println(word.equals(reverse));
 
         // UC3
         System.out.print("Enter word: ");
@@ -34,18 +34,15 @@ public class PalindromeCheckerApp {
 
         String rev = "";
 
-        for (int i = input.length() - 1; i >= 0; i--) {
+        for (int i = input.length() - 1; i >= 0; i--)
             rev += input.charAt(i);
-        }
 
-        System.out.println(input.equals(rev) ? "Palindrome" : "Not Palindrome");
+        System.out.println(input.equals(rev));
 
         // UC4
         char[] chars = input.toCharArray();
-
         int start = 0;
         int end = chars.length - 1;
-
         boolean isPalindrome = true;
 
         while (start < end) {
@@ -57,7 +54,7 @@ public class PalindromeCheckerApp {
             end--;
         }
 
-        System.out.println(isPalindrome ? "Palindrome" : "Not Palindrome");
+        System.out.println(isPalindrome);
 
         // UC5
         Stack<Character> stack = new Stack<>();
@@ -70,7 +67,7 @@ public class PalindromeCheckerApp {
         while (!stack.isEmpty())
             stackRev += stack.pop();
 
-        System.out.println(input.equals(stackRev) ? "Palindrome" : "Not Palindrome");
+        System.out.println(input.equals(stackRev));
 
         // UC6
         String qInput = "civic";
@@ -153,6 +150,33 @@ public class PalindromeCheckerApp {
 
         System.out.println(normPal);
 
+        // UC11
+        PalindromeService service = new PalindromeService();
+
+        String oopInput = "racecar";
+
+        System.out.println(service.checkPalindrome(oopInput));
+
         sc.close();
     }
 }
+
+class PalindromeService {
+
+    public boolean checkPalindrome(String input) {
+
+        int start = 0;
+        int end = input.length() - 1;
+
+        while (start < end) {
+
+            if (input.charAt(start) != input.charAt(end))
+                return false;
+
+            start++;
+            end--;
+        }
+
+        return true;
+    }
+                    }

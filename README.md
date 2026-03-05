@@ -1,10 +1,18 @@
-Welcome
-# PalindroneChekcerApp
-//running procedure
-//flow of project
-//objective
-//usercase1
-=======
+
+# PalindroneCheckerApp
+## UC1: Application Entry & Welcome Message
+
+Objective:
+Create the entry point of the Palindrome Checker application and display a welcome message.
+
+Flow:
+- Create the main class PalindromeCheckerApp
+- Implement the main() method
+- Display welcome message to the user
+
+Concepts Used:
+Java Class, Main Method, System.out.println()
+
 ## UC2: Hardcoded Palindrome
 
 Objective:
@@ -13,7 +21,7 @@ Check whether a hardcoded string is a palindrome.
 Flow:
 - Program starts
 - Hardcoded string is checked
-- Result displayed\
+- Result displayed
 
 ## UC3: Palindrome Using String Reverse
 
@@ -26,6 +34,7 @@ Flow:
 - Compared using equals()
 - Result displayed
 
+  
 ## UC4: Character Array Palindrome
 
 Objective:
@@ -35,6 +44,4 @@ Flow:
 - Convert string to char[]
 - Compare first and last characters
 - Move pointers inward
-- Display result
-# PalindroneCheckerApp
- main
+- Display results 

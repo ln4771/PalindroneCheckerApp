@@ -13,7 +13,7 @@ Check whether a hardcoded string is a palindrome.
 Flow:
 - Program starts
 - Hardcoded string is checked
-- Result displayed\
+- Result displayed
 
 ## UC3: Palindrome Using String Reverse
 

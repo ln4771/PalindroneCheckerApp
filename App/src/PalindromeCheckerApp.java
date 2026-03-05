@@ -25,7 +25,7 @@ public class PalindromeCheckerApp {
         for (int i = word.length() - 1; i >= 0; i--)
             reverse += word.charAt(i);
 
-        System.out.println(word.equals(reverse));
+        System.out.println("UC2: " + word.equals(reverse));
 
         // UC3
         System.out.print("Enter word: ");
@@ -36,7 +36,7 @@ public class PalindromeCheckerApp {
         for (int i = input.length() - 1; i >= 0; i--)
             rev += input.charAt(i);
 
-        System.out.println(input.equals(rev));
+        System.out.println("UC3: " + input.equals(rev));
 
         // UC4
         char[] chars = input.toCharArray();
@@ -54,7 +54,7 @@ public class PalindromeCheckerApp {
             end--;
         }
 
-        System.out.println(isPalindrome);
+        System.out.println("UC4: " + isPalindrome);
 
         // UC5
         Stack<Character> stack = new Stack<>();
@@ -67,7 +67,7 @@ public class PalindromeCheckerApp {
         while (!stack.isEmpty())
             stackRev += stack.pop();
 
-        System.out.println(input.equals(stackRev));
+        System.out.println("UC5: " + input.equals(stackRev));
 
         // UC6
         String qInput = "civic";
@@ -89,7 +89,7 @@ public class PalindromeCheckerApp {
             }
         }
 
-        System.out.println(qPal);
+        System.out.println("UC6: " + qPal);
 
         // UC7
         Deque<Character> d = new ArrayDeque<>();
@@ -108,7 +108,7 @@ public class PalindromeCheckerApp {
             }
         }
 
-        System.out.println(dPal);
+        System.out.println("UC7: " + dPal);
 
         // UC8
         LinkedList<Character> list = new LinkedList<>();
@@ -127,15 +127,14 @@ public class PalindromeCheckerApp {
             }
         }
 
-        System.out.println(lPal);
+        System.out.println("UC8: " + lPal);
 
         // UC9
         String rec = "madam";
-        System.out.println(recursiveCheck(rec, 0, rec.length() - 1));
+        System.out.println("UC9: " + recursiveCheck(rec, 0, rec.length() - 1));
 
         // UC10
         String phrase = "A man a plan a canal Panama";
-
         String normalized = phrase.replaceAll("[^a-zA-Z]", "").toLowerCase();
 
         boolean normPal = true;
@@ -147,15 +146,24 @@ public class PalindromeCheckerApp {
             }
         }
 
-        System.out.println(normPal);
+        System.out.println("UC10: " + normPal);
 
         // UC11
         PalindromeService service = new PalindromeService();
-        System.out.println(service.checkPalindrome("racecar"));
+        System.out.println("UC11: " + service.checkPalindrome("racecar"));
 
         // UC12 Strategy Pattern
         PalindromeStrategy strategy = new StackStrategy();
-        System.out.println(strategy.check("level"));
+        System.out.println("UC12: " + strategy.check("level"));
+
+        // UC13 Performance Comparison
+        String test = "level";
+
+        long startTime = System.nanoTime();
+        strategy.check(test);
+        long endTime = System.nanoTime();
+
+        System.out.println("UC13 Execution Time: " + (endTime - startTime) + " ns");
 
         sc.close();
     }
@@ -201,4 +209,4 @@ class StackStrategy implements PalindromeStrategy {
 
         return true;
     }
-}
+            }

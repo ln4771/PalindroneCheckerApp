@@ -22,5 +22,3 @@ Flow:
 - Program starts
 - Hardcoded string is checked
 - Result displayed
-# PalindroneCheckerApp
- main

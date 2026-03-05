@@ -13,35 +13,47 @@ Flow:
 Concepts Used:
 Java Class, Main Method, System.out.println()
 
-## UC2: Hardcoded Palindrome
+## UC2 : Hardcoded Palindrome Result
 
 Objective:
-Check whether a hardcoded string is a palindrome.
+Check whether a predefined string is a palindrome.
 
 Flow:
-- Program starts
-- Hardcoded string is checked
-- Result displayed
+- Define a string variable
+- Reverse the string using a loop
+- Compare the original string with the reversed string
+- Display whether it is a palindrome or not
 
-## UC3: Palindrome Using String Reverse
+Concepts Used:
+String Handling, For Loop, Conditional Statements
+
+
+## UC3 : Palindrome Check Using String Reverse
 
 Objective:
-Check palindrome by reversing the string using a loop.
+Allow the user to enter a word and check if it is a palindrome by reversing the string.
 
 Flow:
-- User enters string
-- String reversed using loop
-- Compared using equals()
-- Result displayed
+- Accept input from the user
+- Reverse the string using a loop
+- Compare the original string with the reversed string
+- Display whether it is a palindrome or not
 
-  
-## UC4: Character Array Palindrome
+Concepts Used:
+Scanner Class, String Manipulation, For Loop, Conditional Statements
+
+
+## UC4 : Character Array Based Palindrome Check
 
 Objective:
-Check palindrome using character array and two-pointer technique.
+Check whether a given string is a palindrome using a character array.
 
 Flow:
-- Convert string to char[]
-- Compare first and last characters
-- Move pointers inward
-- Display results 
+- Accept input from the user
+- Convert the string into a character array
+- Compare characters from the start and end
+- Continue comparison until the middle of the array
+- Display whether it is a palindrome or not
+
+Concepts Used:
+Character Array, Two Pointer Technique, Loop, Conditional Statements

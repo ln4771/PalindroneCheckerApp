@@ -2,8 +2,6 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.util.Queue;
 import java.util.LinkedList;
-import java.util.Deque;
-import java.util.ArrayDeque;
 
 public class PalindromeCheckerApp {
 
@@ -50,7 +48,7 @@ public class PalindromeCheckerApp {
         System.out.println("\nUC4: Character Array Based Palindrome Check");
 
         System.out.print("Enter a word: ");
-        String text = sc.nextLine();
+        String text = sc.nextLine()
 
         char[] chars = text.toCharArray();
         int start = 0, end = chars.length - 1;
@@ -59,7 +57,7 @@ public class PalindromeCheckerApp {
         while (start < end) {
             if (chars[start] != chars[end]) {
                 isPalindrome = false;
-                break;
+                break
             }
             start++;
             end--;
@@ -105,11 +103,11 @@ public class PalindromeCheckerApp {
         boolean isPal = true;
 
         while (!queue.isEmpty()) {
+
             if (queue.remove() != stack2.pop()) {
                 isPal = false;
                 break;
             }
-        }
 
         System.out.println("Input : " + queueStackInput);
         System.out.println("Is Palindrome? : " + isPal);

@@ -1,52 +1,84 @@
-Welcome
-# PalindroneChekcerApp
-//running procedure
-//flow of project
-//objective
-//usercase1
-=======
-## UC2: Hardcoded Palindrome
+# Palindrome Checker App
+
+The objective of the Palindrome Checker App is to design and implement a console-based Java application that validates whether a given string is a palindrome under different conditions, while strengthening core programming fundamentals and data structure concepts.
+
+---
+
+## UC1 : Application Entry & Welcome Message
 
 Objective:
-Check whether a hardcoded string is a palindrome.
+Create the entry point of the Palindrome Checker application and display a welcome message.
 
 Flow:
-- Program starts
-- Hardcoded string is checked
-- Result displayed\
+- Start the application
+- Display welcome message for the user
+- Introduce the Palindrome Checker program
 
-## UC3: Palindrome Using String Reverse
+Concepts Used:
+Main Method, Console Output, Basic Java Program Structure
+
+---
+
+## UC2 : Hardcoded Palindrome Result
 
 Objective:
-Check palindrome by reversing the string using a loop.
+Check whether a predefined string is a palindrome.
 
 Flow:
-- User enters string
-- String reversed using loop
-- Compared using equals()
-- Result displayed
+- Define a string variable
+- Reverse the string using a loop
+- Compare the original string with the reversed string
+- Display whether it is a palindrome or not
 
-## UC4: Character Array Palindrome
+Concepts Used:
+String Handling, For Loop, Conditional Statements
+
+---
+
+## UC3 : Palindrome Check Using String Reverse
 
 Objective:
-Check palindrome using character array and two-pointer technique.
+Allow the user to enter a word and check if it is a palindrome by reversing the string.
 
 Flow:
-- Convert string to char[]
-- Compare first and last characters
-- Move pointers inward
-- Display result
+- Accept input from the user
+- Reverse the string using a loop
+- Compare the original string with the reversed string
+- Display whether it is a palindrome or not
 
+Concepts Used:
+Scanner Class, String Manipulation, For Loop, Conditional Statements
 
-## UC5: Stack-Based Palindrome Checker
+---
+
+## UC4 : Character Array Based Palindrome Check
 
 Objective:
-Validate palindrome using stack data structure.
+Check whether a given string is a palindrome using a character array.
 
 Flow:
-- Push characters into stack
-- Pop characters to reverse
-- Compare original and reversed string
-- Display result
-# PalindroneCheckerApp
- main
+- Accept input from the user
+- Convert the string into a character array
+- Compare characters from the start and end
+- Continue comparison until the middle of the array
+- Display whether it is a palindrome or not
+
+Concepts Used:
+Character Array, Two Pointer Technique, Loop, Conditional Statements
+
+---
+
+## UC5 : Stack-Based Palindrome Checker
+
+Objective:
+Check whether a given string is a palindrome using a Stack data structure.
+
+Flow:
+- Accept input from the user
+- Push each character of the string into the stack
+- Pop characters from the stack to form the reversed string
+- Compare the original string with the reversed string
+- Display whether it is a palindrome or not
+
+Concepts Used:
+Stack (LIFO), Push Operation, Pop Operation, Loop, Conditional Statements
